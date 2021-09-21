@@ -1,0 +1,214 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body,h1, h2, h3,p,ol[class],li {
+  margin: 0;
+}
+
+ol[class="timeline"]{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+@font-face {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.cdnfonts.com/s/15335/Quattrocento-Regular.woff') format('woff');
+    unicode-range: U+00-7F, U+80-FF;
+}
+@font-face {
+    font-family: 'Quattrocento';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.cdnfonts.com/s/15335/Quattrocento-Bold.woff') format('woff');
+    unicode-range: U+00-7F, U+80-FF;
+}
+
+:root {
+    --fsize: 16px;
+    font-family: 'Quattrocento', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    --passion: #990000;
+    --skill: #a6570c;
+    --experience: #058a05;
+    --education: #2274c5;
+    --background:  #f5f5f5;
+    --white: #ffffff;
+}
+
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    font-size: var(--fsize);
+    background-color: var(--background);
+}
+
+.resume {
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+}
+
+.resume > * {
+    flex-basis: 100%;
+}
+
+.resume__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.resume__about, .resume__contacts {
+    flex-basis: 100%;
+}
+
+.resume__info > * {
+    margin: .5rem;
+}
+
+.resume__photo {
+    width: 200px;
+    height: 212px;
+}
+
+.resume__job {
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.card__heading {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.card__heading > * {
+    margin: .3rem;
+}
+
+.card__heading > svg {
+    width: 75px;
+    height: 75px;
+}
+
+.card__title {
+    text-transform: uppercase;
+}
+
+.card__line {
+    display: none;
+}
+
+.education {
+    color: var(--education);
+    fill: var(--education);
+}
+
+.experience {
+    color: var(--experience);
+    fill: var(--experience);
+}
+
+.skills {
+    color: var(--skill);
+    fill: var(--skill);
+}
+
+.passions {
+    color: var(--passion);
+    fill: var(--passion);
+}
+
+.timeline__item {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.timeline__item > * {
+    margin: .5rem;
+}
+
+.timeline__desc {
+    flex-grow: 1;
+}
+
+.list {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sublist {
+    flex-basis: 100%;
+    text-align: center;
+    margin: .5rem;
+}
+
+.sublist__title {
+    text-transform: uppercase;
+}
+
+.passion__elements {
+    margin: .5rem;
+}
+
+@media screen and (min-width: 789px) {
+    .resume {
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    body {
+        padding: 2rem;
+    }
+
+    .resume__info {
+        text-align: left;
+    }
+
+    .sublist {
+        flex-basis: 30%;
+    }
+
+    .resume__about, .resume__contacts {
+        flex-basis: auto;
+    }
+
+    .resume__photo {
+        width: 100px;
+        height: 112px;
+    }
+
+    .card__line {
+        display: block;
+        flex-grow: 1;
+        border-style: solid;
+        border-width: 2px;
+    }
+
+    .card__heading > svg {
+        width: 80px;
+        height: 80px;
+    }
+
+}
