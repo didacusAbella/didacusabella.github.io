@@ -1,11 +1,6 @@
 export default {
     'education': [
         {
-            year : "2020 - Ora",
-            title: "Sviluppatore web freelance",
-            details: ''
-        },
-        {
             year : "2017 - 2020",
             title: "Laurea Magistrale in Informatica,",
             details: `
@@ -29,6 +24,12 @@ export default {
         }
     ],
     'experience': [
+        {
+            year: "Novembre 2021 - Presente",
+            job: "Analista Programmatore",
+            org: "presso Webeetle.",
+            details: `Sviluppo di RIA per la digitalizzazione dei processi di business`
+        },
         {
             year: "Giugno 2021 – Luglio 2021",
             job: "Lavoro freelance",
